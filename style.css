@@ -1,0 +1,481 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}   
+
+body {
+    background-color: black;
+
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.185);
+
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+
+.secondary-menu {
+    display: none;
+}
+
+.primary-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+}
+
+.primary-menu ul li {
+    font-size: 1.1rem;
+    margin: 10px 25px;
+}
+
+
+
+video {
+
+    width: 100%;
+    max-height: 100vh;
+}
+
+.content {
+    height: 300px;
+    max-width: 450px;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.content p {
+    margin: 15px 0 15px;
+}
+
+
+.ppicon {
+    display: flex;
+}
+
+.ppicon i {
+    margin: 10px;
+    padding: 3px;
+    color: black;
+
+}
+
+.play,
+.wishlist {
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 10vw;
+}
+
+.play:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.wishlist:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.play:hover #ps {
+    color: white;
+}
+
+.wishlist:hover #ws {
+    color: white;
+}
+
+
+.img:hover {
+    transform: translateY(5px);
+}
+
+
+
+.section-2 {
+    padding-top: 40px;
+    margin: 20px;
+}
+
+.section-2 h2 {
+    padding-bottom: 20px;
+}
+
+.section-2 .img {
+    width: 270px;
+    height: 180px;
+    border: 2px solid black;
+}
+
+.section-2 .img img {
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.section-2 p {
+    position: absolute;
+    z-index: 12;
+    top: 10px;
+}
+
+.section-2 li {
+    margin: 0 8px 0 8px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.copy,
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    margin: 0 10px 0 10px;
+}
+
+
+/* header-css----------------- */
+
+
+@media screen and (max-width:821px) {
+    header {
+        grid-template-columns: 1fr;
+        position: static;
+        padding: 4px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .primary-menu ul {
+        justify-content: center;
+    }
+
+    .primary-menu ul li {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width:910px) {
+    .primary-menu ul li {
+
+        margin: 10px 15px;
+    }
+
+}
+
+
+
+@media screen and (max-width:570px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 10px;
+
+    }
+
+    .logo {
+        display: unset;
+    }
+
+    .primary-menu {
+        display: none;
+    }
+
+    .secondary-menu {
+        display: block;
+    }
+
+    #check {
+        display: none;
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    .secondary-menu ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.7rem;
+        height: 100vh;
+        top: -100vh;
+        transition: all 1s;
+        background-color: black;
+        z-index: 111;
+    }
+
+    .secondary-menu ul li {
+        margin-top: 30px;
+    }
+
+    #cancel,
+    #btn {
+        position: absolute;
+        transition: all 1s;
+    }
+
+    #btn {
+        top: 30px;
+        right: 20px;
+    }
+
+    #cancel {
+        z-index: 112;
+        right: 5%;
+        top: -10vh;
+    }
+
+
+    #check:checked~.secondary-menu-menu {
+        top: 0;
+    }
+
+    #check:checked~label #cancel {
+        top: 10px;
+    }
+
+
+}
+
+
+@media screen and (max-width:310px) {
+    .menu {
+        right: 5px;
+    }
+
+}
+
+
+/* main-css------------ */
+
+@media screen and (max-width:870px) {
+
+
+    .section-2 {
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+
+    .section-2 .img {
+        width: 200px;
+        height: 150px;
+        border: 2px solid black;
+    }
+
+    .section-2 li {
+        margin: 0 3px 0 3px;
+    }
+
+}
+
+
+@media screen and (max-width:450px) {
+
+    .section-2 .img {
+        width: 150px;
+        height: 100px;
+        border: 2px solid black;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* footer-css------------ */
+
+@media screen and (max-width:870px) {
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .social-media {
+        margin: 10px;
+    }
+}
+
+
+/* content-css---------------- */
+
+@media screen and (max-width:1070px) {
+
+    .ppicon {
+        font-size: 0.9rem;
+    }
+
+    .play,
+    .wishlist {
+        width: 15vw;
+    }
+
+    .content {
+        left: 5%;
+        width: 430px;
+    }
+
+}
+
+@media screen and (max-width:960px) {
+
+    .content {
+        top: 25%;
+    }
+}
+
+@media screen and (max-width:820px) {
+    
+    .content{
+        top: 40%;
+    }
+
+}
+
+
+@media screen and (max-width:700px) {
+
+    .content {
+        top: 35%;
+        width: 400px;
+    }
+
+    .play,
+    .wishlist {
+        width: 20vw;
+    }
+
+
+    .content p {
+        font-size: 0.8rem;
+    }
+
+    .content h1 {
+        font-size: 1.9rem;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+        .content{
+            top: 30%;
+        }
+
+}
+
+@media screen and (max-width:570px) {
+
+    .content {
+        top: 19%;
+        width: 350px;
+    }
+
+    .content p {
+        font-size: 0.7rem;
+    }
+
+    .ppicon {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width:454px) {
+
+
+    .ppicon {
+        font-size: 0.7rem;
+    }
+
+    .content {
+        top: 18%;
+        width: 250px;
+    }
+
+    .content h1 {
+        font-size: 1.4rem;
+    }
+
+    .content p {
+        margin: 5px;
+        font-size: 0.6rem;
+    }
+
+    .ppicon i {
+        margin: 4px;
+    }
+}
+
+@media screen and (max-width:390px) {
+
+        .content{
+            top: 17%;
+        }
+}
+
+@media screen and (max-width:360px) {
+
+    .content {
+        width: 150px;
+    }
+
+    .content h1 {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 0.3rem;
+    }
+
+    .play,
+    .wishlist {
+        font-size: 0.4rem;
+    }
+}
